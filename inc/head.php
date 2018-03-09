@@ -42,11 +42,28 @@
               Cart
             </a>
           </li>
+          <?php
+            if (isset($_SESSION['loginname'])) {
+                ?>
+                <li>
+                    <a class="btn btn-danger navbar-btn" href="logout.php"><span class="glyphicon glyphicon-off" aria-hidden="true"></span>
+                        Déconnection
+                    </a>
+                </li>
+                <?php
+            }
+          ?>
         </ul>
       </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
   </nav>
   <div class="container-fluid text-right">
-    <strong>Hello Wilder !</strong>
+    <strong>Hello <?php
+                        if (isset($_SESSION['loginname'])) {
+                            echo $_SESSION['loginname'];
+                        } else {
+                            echo 'Wilder';
+                        }
+                  ?></strong>
   </div>
 </header>

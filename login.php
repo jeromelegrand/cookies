@@ -7,7 +7,7 @@
         <strong> Sign in to continue</strong>
       </div>
       <div class="panel-body">
-        <form role="form" action="#" method="POST">
+        <form role="form" action="checkLog.php" method="POST">
           <fieldset>
             <div class="row">
               <div class="center-block">
