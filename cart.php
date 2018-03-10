@@ -1,3 +1,7 @@
+<?php
+require 'checkCookie.php'
+?>
+
 <?php require 'inc/head.php'; ?>
 <section class="cookies container-fluid">
     <div class="row">
