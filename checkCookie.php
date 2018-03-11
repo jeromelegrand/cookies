@@ -1,7 +1,9 @@
 <?php
-$cookieList = [32, 36, 46, 58];
+require 'cookieList.php';
 
 $countCookieCart = 0;
-foreach ($cookieList as $cookie) {
-    $countCookieCart = $countCookieCart + $_COOKIE[$cookie];
+foreach ($cookieList as $ref => $name) {
+    if (isset($_COOKIE[$ref])) {
+            $countCookieCart = $countCookieCart + $_COOKIE[$ref];
+    }
 }

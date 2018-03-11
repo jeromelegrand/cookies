@@ -5,14 +5,14 @@ var_dump($_COOKIE);
 
 //modification des cookie
 if (isset($_GET['add_to_cart'])) {
-    $number = $_GET['add_to_cart'];
-    var_dump($number);
-    if (isset($_COOKIE[$number])) {
-        $amount = $_COOKIE[$number] + 1;
-        setcookie($number, $amount, time() + 60 * 10);
+    $ref = $_GET['add_to_cart'];
+    var_dump($ref);
+    if (isset($_COOKIE[$ref])) {
+        $amount = $_COOKIE[$ref] + 1;
+        setcookie($ref, $amount, time() + 60 * 10);
     } else {
         echo 'b<br>';
-        setcookie($number, 1, time() + 60 * 10);
+        setcookie($ref, 1, time() + 60 * 10);
     }
 }
 

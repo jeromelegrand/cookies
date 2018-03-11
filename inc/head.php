@@ -43,7 +43,12 @@ require 'checkCookie.php'
           <li>
             <a href="/cart.php" class="btn btn-warning navbar-btn">
               <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
-              Cart <span class="badge"> <?= $countCookieCart; ?></span>
+              Cart <?php if ($countCookieCart != 0) {
+                  ?>
+                  <span class="badge"> <?= $countCookieCart; ?></span>
+                  <?php
+              }
+              ?>
             </a>
           </li>
           <?php
