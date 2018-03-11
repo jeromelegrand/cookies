@@ -1,3 +1,7 @@
+<?php
+require 'checkCookie.php'
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -39,7 +43,7 @@
           <li>
             <a href="/cart.php" class="btn btn-warning navbar-btn">
               <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
-              Cart
+              Cart <span class="badge"> <?= $countCookieCart; ?></span>
             </a>
           </li>
           <?php
