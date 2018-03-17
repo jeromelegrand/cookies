@@ -2,11 +2,6 @@
 
 session_start();
 
-if (null == isset($_SESSION['loginname'])) {
-    header('Location: login.php');
-    exit();
-}
-
 require 'inc/head.php';
 
 ?>
